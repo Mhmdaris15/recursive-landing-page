@@ -13,7 +13,7 @@ export default defineConfig({
     cors: true,  // Allow cross-origin requests in development
   },
   preview: {
-    host: true,  // Allow external connections
+    host: "0.0.0.0",  // Bind to all interfaces
     port: 3007,
     strictPort: true,
   },

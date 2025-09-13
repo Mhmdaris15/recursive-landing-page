@@ -27,11 +27,14 @@ WORKDIR /app
 # Copy package files for preview server
 COPY package*.json ./
 
-# Install only production dependencies and vite for preview
-RUN npm install --omit=dev && npm install vite
+# Install only production dependencies and express for serving
+RUN npm install --omit=dev && npm install express
 
 # Copy built application from builder stage
 COPY --from=builder /app/dist ./dist
+
+# Copy server file
+COPY server.js ./
 
 # Expose port 3007
 EXPOSE 3007
@@ -43,5 +46,5 @@ RUN apk add --no-cache curl
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:3007/ || exit 1
 
-# Start Vite preview server on port 3007 with host binding
-CMD ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "3007", "--strictPort"]
+# Start Express server
+CMD ["node", "server.js"]
