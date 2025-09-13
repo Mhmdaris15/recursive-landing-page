@@ -24,7 +24,7 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "/src/assets/foto-aris.jpg",
+    imageUrl: "../assets/foto-aris.jpg",
     name: "Aris Septanugroho",
     position: "CEO & Founder",
     description: "Visionary leader with expertise in complex system development and IT solutions.",
