@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import arisphoto from "../assets/foto-aris.jpg";
 
 interface TeamProps {
   imageUrl: string;
@@ -24,7 +25,7 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "../assets/foto-aris.jpg",
+    imageUrl: arisphoto,
     name: "Aris Septanugroho",
     position: "CEO & Founder",
     description: "Visionary leader with expertise in complex system development and IT solutions.",
