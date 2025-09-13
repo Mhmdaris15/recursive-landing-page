@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --only=production=false
+RUN npm install
 
 # Copy source code
 COPY . .
@@ -28,7 +28,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install only production dependencies and vite for preview
-RUN npm ci --only=production && npm install vite
+RUN npm install --omit=dev && npm install vite
 
 # Copy built application from builder stage
 COPY --from=builder /app/dist ./dist
