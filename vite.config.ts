@@ -10,6 +10,6 @@ export default defineConfig({
     },
   },
   preview: {
-    allowedHosts: ["recursive-tech.site"],
+    allowedHosts: true,
   },
 });
