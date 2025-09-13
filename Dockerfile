@@ -43,5 +43,5 @@ RUN apk add --no-cache curl
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:3007/ || exit 1
 
-# Start Vite preview server on port 3007
-CMD ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "3007"]
+# Start Vite preview server on port 3007 with host binding
+CMD ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "3007", "--strictPort"]
