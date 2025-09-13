@@ -9,7 +9,10 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    cors: true,  // Allow cross-origin requests in development
+  },
   preview: {
-    allowedHosts: ["*"],
+    allowedHosts: ["*"],  // Allow all hosts in production preview
   },
 });
