@@ -13,34 +13,34 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
+    question: "What IT services does Recursive Tech offer?",
+    answer: "We provide comprehensive IT solutions including web development, mobile app development, AI integration, cloud solutions, cybersecurity, digital transformation consulting, and custom software development tailored to your business needs.",
     value: "item-1",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+    question: "How long does a typical web development project take?",
+    answer: "Project timelines vary based on complexity and requirements. A simple business website typically takes 2-4 weeks, while complex web applications can take 8-16 weeks. We provide detailed timelines during our initial consultation and keep you updated throughout the development process.",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
+    question: "Do you provide ongoing support and maintenance after project completion?",
+    answer: "Yes, we offer comprehensive post-launch support including regular updates, security patches, performance monitoring, and technical assistance. We provide various maintenance packages to ensure your systems run smoothly and stay up-to-date.",
     value: "item-3",
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "Can you help integrate AI solutions into our existing business processes?",
+    answer: "Absolutely! We specialize in AI integration and can help automate workflows, implement chatbots, data analytics, machine learning models, and other AI-powered solutions that enhance efficiency and drive business growth.",
     value: "item-4",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+    question: "What makes Recursive Tech different from other IT service providers?",
+    answer: "Our recursive approach means we continuously iterate and improve solutions based on real-world feedback. We combine cutting-edge technology with proven methodologies, offer personalized service, and maintain long-term partnerships with our clients to ensure sustained success.",
     value: "item-5",
+  },
+  {
+    question: "Do you work with small businesses or only large enterprises?",
+    answer: "We work with businesses of all sizes, from startups and small businesses to large enterprises. Our scalable solutions and flexible pricing models are designed to accommodate different budgets and requirements while delivering exceptional value.",
+    value: "item-6",
   },
 ];
 
@@ -80,7 +80,7 @@ export const FAQ = () => {
         Still have questions?{" "}
         <a
           rel="noreferrer noopener"
-          href="#"
+          href="#contact"
           className="text-primary transition-all border-primary hover:border-b-2"
         >
           Contact us

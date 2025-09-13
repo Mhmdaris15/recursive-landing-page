@@ -37,6 +37,81 @@ const teamList: TeamProps[] = [
       },
     ],
   },
+  {
+    imageUrl: "https://i.pravatar.cc/150?img=32",
+    name: "Rafael Satrio",
+    position: "CTO & Co-Founder",
+    socialNetworks: [
+      {
+        name: "Linkedin",
+        url: "#",
+      },
+      {
+        name: "Instagram",
+        url: "#",
+      },
+    ],
+  },
+  {
+    imageUrl: "https://i.pravatar.cc/150?img=33",
+    name: "Bimantoro",
+    position: "Lead Backend Developer",
+    socialNetworks: [
+      {
+        name: "Linkedin",
+        url: "#",
+      },
+      {
+        name: "Instagram",
+        url: "#",
+      },
+    ],
+  },
+  {
+    imageUrl: "https://i.pravatar.cc/150?img=41",
+    name: "Dyo Pascal",
+    position: "Senior Frontend Developer",
+    socialNetworks: [
+      {
+        name: "Linkedin",
+        url: "#",
+      },
+      {
+        name: "Instagram",
+        url: "#",
+      },
+    ],
+  },
+  {
+    imageUrl: "https://i.pravatar.cc/150?img=42",
+    name: "Dika",
+    position: "UI/UX Designer & Developer",
+    socialNetworks: [
+      {
+        name: "Linkedin",
+        url: "#",
+      },
+      {
+        name: "Instagram",
+        url: "#",
+      },
+    ],
+  },
+  {
+    imageUrl: "https://i.pravatar.cc/150?img=43",
+    name: "Satria Erlangga",
+    position: "DevOps & System Engineer",
+    socialNetworks: [
+      {
+        name: "Linkedin",
+        url: "#",
+      },
+      {
+        name: "Instagram",
+        url: "#",
+      },
+    ],
+  },
 ];
 
 export const Team = () => {
@@ -60,13 +135,13 @@ export const Team = () => {
     >
       <h2 className="text-3xl md:text-4xl font-bold">
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Our{" "}
+          Meet Our{" "}
         </span>
-        Leadership
+        Expert Team
       </h2>
 
       <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Meet the visionary leader driving innovation at Recursive Tech.
+        Talented professionals driving innovation and delivering exceptional results for every project.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
@@ -89,7 +164,14 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>Visionary leader with expertise in complex system development and IT solutions.</p>
+                <p>
+                  {name === "Muhammad Aris Septanugroho" ? "Visionary leader with expertise in complex system development and IT solutions." :
+                   name === "Rafael Satrio" ? "Technical architect specializing in scalable backend systems and cloud infrastructure." :
+                   name === "Bimantoro" ? "Expert in database design, API development, and server-side optimization." :
+                   name === "Dyo Pascal" ? "Frontend specialist creating intuitive and responsive user interfaces." :
+                   name === "Dika" ? "Creative designer and developer focused on user experience and visual design." :
+                   "Infrastructure expert ensuring reliable deployments and system security."}
+                </p>
               </CardContent>
 
               <CardFooter>

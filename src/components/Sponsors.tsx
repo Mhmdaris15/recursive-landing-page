@@ -1,4 +1,11 @@
-import { Radar } from "lucide-react";
+import { 
+  Radar, 
+  Code, 
+  Database, 
+  Cloud, 
+  Smartphone, 
+  Palette 
+} from "lucide-react";
 
 interface SponsorProps {
   icon: JSX.Element;
@@ -7,28 +14,28 @@ interface SponsorProps {
 
 const sponsors: SponsorProps[] = [
   {
-    icon: <Radar size={34} />,
-    name: "Sponsor 1",
+    icon: <Code size={34} />,
+    name: "React & TypeScript",
+  },
+  {
+    icon: <Database size={34} />,
+    name: "Node.js & MongoDB",
+  },
+  {
+    icon: <Cloud size={34} />,
+    name: "AWS & Docker",
+  },
+  {
+    icon: <Smartphone size={34} />,
+    name: "React Native",
+  },
+  {
+    icon: <Palette size={34} />,
+    name: "Figma & Adobe",
   },
   {
     icon: <Radar size={34} />,
-    name: "Sponsor 2",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 3",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 4",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 5",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 6",
+    name: "AI & Machine Learning",
   },
 ];
 
@@ -39,7 +46,7 @@ export const Sponsors = () => {
       className="container pt-24 sm:py-32"
     >
       <h2 className="text-center text-md lg:text-xl font-bold mb-8 text-primary">
-        Investors and founders
+        Our Technology Stack & Expertise
       </h2>
 
       <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">

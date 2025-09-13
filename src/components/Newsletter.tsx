@@ -4,22 +4,22 @@ import { Input } from "./ui/input";
 export const Newsletter = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("Subscribed!");
+    console.log("Project inquiry submitted!");
   };
 
   return (
-    <section id="newsletter">
+    <section id="contact">
       <hr className="w-11/12 mx-auto" />
 
       <div className="container py-24 sm:py-32">
         <h3 className="text-center text-4xl md:text-5xl font-bold">
-          Join Our Daily{" "}
+          Ready to Build Your{" "}
           <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-            Newsletter
+            Next Project?
           </span>
         </h3>
         <p className="text-xl text-muted-foreground text-center mt-4 mb-8">
-          Lorem ipsum dolor sit amet consectetur.
+          Share your project idea and get a free consultation from our expert team.
         </p>
 
         <form
@@ -27,11 +27,13 @@ export const Newsletter = () => {
           onSubmit={handleSubmit}
         >
           <Input
-            placeholder="muhammadaris1945@gmail.com"
+            placeholder="your.email@company.com"
             className="bg-muted/50 dark:bg-muted/80 "
             aria-label="email"
+            type="email"
+            required
           />
-          <Button>Subscribe</Button>
+          <Button>Get Free Consultation</Button>
         </form>
       </div>
 

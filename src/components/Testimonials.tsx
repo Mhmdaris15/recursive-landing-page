@@ -17,45 +17,39 @@ interface TestimonialProps {
 const testimonials: TestimonialProps[] = [
   {
     image: "https://github.com/shadcn.png",
-    name: "Sarah Johnson",
-    userName: "@tech_sarah",
-    comment: "Recursive Tech delivered exactly what we needed - a complex e-commerce platform that handles our growing business perfectly.",
+    name: "Sari Indrawati",
+    userName: "@sari_startup",
+    comment: "Recursive Tech berhasil membangun platform e-commerce yang sangat kompleks untuk bisnis kami. Tim mereka sangat profesional dan hasilnya melebihi ekspektasi.",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Michael Chen",
-    userName: "@michael_dev",
-    comment:
-      "Their AI integration solution transformed our workflow. The team's expertise in complex systems is outstanding.",
-  },
-
-  {
-    image: "https://github.com/shadcn.png",
-    name: "David Rodriguez",
-    userName: "@david_startup",
-    comment:
-      "From web development to mobile app, Recursive Tech provided end-to-end solutions. Professional service and cutting-edge technology.",
+    name: "Budi Santoso",
+    userName: "@budi_tech",
+    comment: "Implementasi AI untuk sistem inventory kami benar-benar mengubah cara kerja perusahaan. Efisiensi meningkat drastis berkat solusi dari Recursive Tech.",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Emily Wilson",
-    userName: "@emily_creative",
-    comment:
-      "The UI/UX design and 3D modeling work exceeded our expectations. They truly understand modern design principles.",
+    name: "Maya Kusuma",
+    userName: "@maya_creative",
+    comment: "Dari website hingga aplikasi mobile, Recursive Tech memberikan solusi end-to-end yang luar biasa. Desain UI/UX nya sangat menarik dan user-friendly.",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "James Thompson",
-    userName: "@james_biz",
-    comment:
-      "Recursive Tech's comprehensive IT solutions helped scale our business. Their technical expertise is unmatched.",
+    name: "Andi Wijaya",
+    userName: "@andi_bisnis",
+    comment: "Tim Recursive Tech membantu transformasi digital perusahaan kami dengan sempurna. Sistem yang mereka bangun sangat robust dan scalable.",
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Lisa Park",
-    userName: "@lisa_marketing",
-    comment:
-      "The photography and videography services complemented their tech work perfectly. A true full-service IT partner.",
+    name: "Dewi Sartika",
+    userName: "@dewi_marketing",
+    comment: "Pelayanan photography dan videography mereka sangat berkualitas, ditambah dengan expertise IT yang kuat. Benar-benar partner teknologi yang lengkap.",
+  },
+  {
+    image: "https://github.com/shadcn.png",
+    name: "Reza Pratama",
+    userName: "@reza_founder",
+    comment: "Recursive Tech tidak hanya mengembangkan aplikasi, tapi juga memberikan konsultasi strategis yang sangat berharga. Highly recommended!",
   },
 ];
 
@@ -66,16 +60,16 @@ export const Testimonials = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold">
-        Discover Why
+        Kenapa Klien
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          Clients Trust{" "}
+          Mempercayai{" "}
         </span>
         Recursive Tech
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
-        See what our clients say about our comprehensive IT solutions and complex system development expertise.
+        Testimoni dari klien-klien yang telah merasakan langsung kualitas solusi IT dan pengembangan sistem kompleks dari kami.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
