@@ -68,8 +68,9 @@ A modern, fully responsive landing page template for IT solutions companies. Bui
 ### Prerequisites
 - Node.js 16+ 
 - npm or yarn package manager
+- Docker & Docker Compose (for containerized deployment)
 
-### Installation
+### Local Development
 
 1. **Clone the repository**
 ```bash
@@ -109,6 +110,68 @@ npm run preview
 # or
 yarn preview
 ```
+
+## 🐳 Docker Deployment
+
+### Quick Docker Setup
+
+#### Production Deployment
+```bash
+# Build and run production container
+docker-compose up -d
+
+# Or using Docker directly
+docker build -t recursive-landing-page .
+docker run -p 3007:3007 recursive-landing-page
+```
+
+#### Development with Hot Reloading
+```bash
+# Run development environment with hot reloading
+docker-compose --profile development up
+
+# Or using Docker directly
+docker build -f Dockerfile.dev -t recursive-landing-page-dev .
+docker run -p 5173:5173 -v $(pwd):/app -v /app/node_modules recursive-landing-page-dev
+```
+
+### Docker Commands
+
+```bash
+# Build production image
+docker build -t recursive-landing-page .
+
+# Run production container
+docker run -d -p 3007:3007 --name recursive-app recursive-landing-page
+
+# Build development image
+docker build -f Dockerfile.dev -t recursive-landing-page-dev .
+
+# Run development container with volume mounting
+docker run -p 5173:5173 -v $(pwd):/app -v /app/node_modules recursive-landing-page-dev
+
+# View container logs
+docker logs recursive-app
+
+# Stop and remove container
+docker stop recursive-app && docker rm recursive-app
+
+# Health check
+curl http://localhost:3007/
+```
+
+### Docker Compose Services
+
+- **recursive-landing-page**: Production build served with Vite preview server
+- **recursive-landing-page-dev**: Development environment with hot reloading (use `--profile development`)
+
+### Production Access
+- Website: `http://localhost:3007`
+- Health Check: `http://localhost:3007/`
+
+### Development Access
+- Website: `http://localhost:5173`
+- Hot reloading enabled for code changes
 
 ## 🎨 Customization
 
