@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Card, CardContent } from "./ui/card";
-import { Loader2, CheckCircle, Phone, Mail, User, Instagram, Lightbulb } from "lucide-react";
+import { Loader2, CheckCircle, Phone, Mail, User, Instagram } from "lucide-react";
 
 export const Newsletter = () => {
   const [formData, setFormData] = useState({
