@@ -1,5 +1,6 @@
 import { About } from "./components/About";
 import { Cta } from "./components/Cta";
+import { DreamApp } from "./components/DreamApp";
 import { FAQ } from "./components/FAQ";
 import { Features } from "./components/Features";
 import { Footer } from "./components/Footer";
@@ -19,6 +20,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <DreamApp />
       <Sponsors />
       <About />
       <HowItWorks />

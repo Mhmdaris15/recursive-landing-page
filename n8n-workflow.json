@@ -1,0 +1,54 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook-test",
+        "responseMode": "lastNode",
+        "responseData": "json",
+        "jsonParameters": true
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [250, 250]
+    },
+    {
+      "parameters": {
+        "spreadsheetId": "your-google-sheet-id", 
+        "range": "Sheet1!A1:E1",
+        "values": [
+          [
+            "={{$json['body']['name']}}",
+            "={{$json['body']['email']}}",
+            "={{$json['body']['whatsapp']}}",
+            "={{$json['body']['instagram']}}",
+            "={{$json['body']['dreamApplication']}}"
+          ]
+        ]
+      },
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [500, 250],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "clientId": "your-client-id",  
+          "clientSecret": "your-client-secret",  
+          "redirectUri": "your-redirect-uri"  
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
