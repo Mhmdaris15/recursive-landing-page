@@ -1,6 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Badge } from "./ui/badge";
-import { Button, buttonVariants } from "@/components/ui/button";
+// import { Badge } from "./ui/badge";
+import {  Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,28 +8,29 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Check, Linkedin } from "lucide-react";
-import { LightBulbIcon } from "./Icons";
+import {  Check, Linkedin } from "lucide-react";
+// import { LightBulbIcon } from "./Icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import arisphoto from "../assets/foto-aris.jpg";
+import { LightBulbIcon } from "./Icons";
+import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
+import { Badge } from "./ui/badge";
 
 export const HeroCards = () => {
   return (
     <div className="hidden lg:flex flex-row flex-wrap gap-8 relative w-[700px] h-[550px]">
-      {/* Testimonial */}
       <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
             <AvatarImage
               alt=""
-              src="https://i.pravatar.cc/150?img=25"
+              src="https://i.pravatar.cc/150?img=21"
             />
             <AvatarFallback>AD</AvatarFallback>
           </Avatar>
 
           <div className="flex flex-col">
-            <CardTitle className="text-lg">Ahmad Dani</CardTitle>
-            <CardDescription>@ahmaddani_id</CardDescription>
+            <CardTitle className="text-lg">Elvan</CardTitle>
           </div>
         </CardHeader>
 
@@ -109,7 +109,7 @@ export const HeroCards = () => {
       </Card>
 
       {/* Custom Solutions */}
-      <Card className="absolute top-[180px] left-[30px] w-72 drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute top-[180px] left-[30px] w-72 mt-32 mr-10 drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
             Custom Solutions
@@ -162,7 +162,7 @@ export const HeroCards = () => {
             </CardDescription>
           </div>
         </CardHeader>
-      </Card>
+      </Card> 
     </div>
   );
 };

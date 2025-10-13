@@ -1,4 +1,8 @@
+// Navbar.tsx - VERSI BARU HANYA UNTUK PORTOFOLIO
+
 import { useState } from "react";
+// <-- LANGKAH 1: IMPORT Link dari react-router-dom
+import { Link } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -12,9 +16,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
-import { Menu } from "lucide-react";
+import { LinkedinIcon, Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoIcon } from "./Icons";
 
@@ -24,22 +27,11 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
-  {
-    href: "#features",
-    label: "Features",
-  },
-  {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
-    href: "#pricing",
-    label: "Pricing",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
+  { href: "/#features", label: "Features" },
+  { href: "/#testimonials", label: "Testimonials" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/portofolio", label: "Portofolio" }, 
 ];
 
 export const Navbar = () => {
@@ -49,33 +41,20 @@ export const Navbar = () => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-            <a
-              rel="noreferrer noopener"
-              href="/"
-              className="ml-2 font-bold text-xl flex"
-            >
+            {/* <-- LANGKAH 2: Ubah logo menjadi Link agar kembali ke home tanpa refresh */}
+            <Link to="/" className="ml-2 font-bold text-xl flex">
               <LogoIcon />
               Recursive Tech
-            </a>
+            </Link>
           </NavigationMenuItem>
 
           {/* mobile */}
           <span className="flex md:hidden">
             <ModeToggle />
-
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
-                <Menu
-                  className="flex md:hidden h-5 w-5"
-                  onClick={() => setIsOpen(true)}
-                >
-                  <span className="sr-only">Menu Icon</span>
-                </Menu>
+                <Menu className="flex md:hidden h-5 w-5" />
               </SheetTrigger>
-
               <SheetContent side={"left"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl">
@@ -83,17 +62,27 @@ export const Navbar = () => {
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
-                  {routeList.map(({ href, label }: RouteProps) => (
-                    <a
-                      rel="noreferrer noopener"
-                      key={label}
-                      href={href}
-                      onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
-                    >
-                      {label}
-                    </a>
-                  ))}
+                  {routeList.map(({ href, label }: RouteProps) =>
+                    href.startsWith("/") ? (
+                      <Link
+                        key={label}
+                        to={href}
+                        onClick={() => setIsOpen(false)}
+                        className={buttonVariants({ variant: "ghost" })}
+                      >
+                        {label}
+                      </Link>
+                    ) : (
+                      <a
+                        key={label}
+                        href={href}
+                        onClick={() => setIsOpen(false)}
+                        className={buttonVariants({ variant: "ghost" })}
+                      >
+                        {label}
+                      </a>
+                    )
+                  )}
                   <a
                     rel="noreferrer noopener"
                     href="https://www.linkedin.com/in/muhammad-aris-septanugroho/"
@@ -102,7 +91,7 @@ export const Navbar = () => {
                       variant: "secondary",
                     })}`}
                   >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
+                    <LinkedinIcon className="mr-2 w-5 h-5" />
                     Contact
                   </a>
                 </nav>
@@ -112,20 +101,34 @@ export const Navbar = () => {
 
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
-            {routeList.map((route: RouteProps, i) => (
-              <a
-                rel="noreferrer noopener"
-                href={route.href}
-                key={i}
-                className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
-                })}`}
-              >
-                {route.label}
-              </a>
-            ))}
+            {/* <-- LANGKAH 4: Modifikasi perulangan untuk menu desktop */}
+            {routeList.map((route: RouteProps, i) =>
+              route.href.startsWith("/") ? (
+                <Link
+                  to={route.href}
+                  key={i}
+                  className={`text-[17px] ${buttonVariants({
+                    variant: "ghost",
+                  })}`}
+                >
+                  {route.label}
+                </Link>
+              ) : (
+                <a
+                  rel="noreferrer noopener"
+                  href={route.href}
+                  key={i}
+                  className={`text-[17px] ${buttonVariants({
+                    variant: "ghost",
+                  })}`}
+                >
+                  {route.label}
+                </a>
+              )
+            )}
           </nav>
 
+          {/* ... (div terakhir tetap sama) ... */}
           <div className="hidden md:flex gap-2">
             <a
               rel="noreferrer noopener"
@@ -133,10 +136,9 @@ export const Navbar = () => {
               target="_blank"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
+              <LinkedinIcon className="mr-2 w-5 h-5" />
               Contact
             </a>
-
             <ModeToggle />
           </div>
         </NavigationMenuList>
