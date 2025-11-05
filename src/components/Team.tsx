@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import arisphoto from "../assets/foto-aris.jpg";
+import ardi from "../assets/ardi.jpg"
 
 interface TeamProps {
   imageUrl: string;
@@ -137,7 +138,7 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=4",
+    imageUrl: ardi,
     name: "Ardiansyah",
     position: "Junior Frontend Developer",
     description: "Emerging frontend developer passionate about modern web technologies.",
@@ -148,7 +149,7 @@ const teamList: TeamProps[] = [
       },
       {
         name: "Instagram",
-        url: "#",
+        url: "https://www.instagram.com/ardsyhbgr/",
       },
     ],
   },
