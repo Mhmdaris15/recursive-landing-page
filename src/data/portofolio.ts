@@ -1,9 +1,17 @@
+import Mija from "@/assets/MIJA.png";
+import Bms from "@/assets/BMS Track.png";
+import Solivex from "@/assets/Solivex.png";
+import Jivaloka from "@/assets/Jivaloka Assets.png";
+import fortune from "@/assets/Fortune.png";
+import citrakerta from "@/assets/Citrakerta.png";
+
+
 export const data = [
   {
     id: "1",
     title: "Mija",
-    description: "Mija is a comprehensive web-based application designed to revolutionize the ordering and reservation systems for restaurants and cafes. By leveraging a user-friendly interface, customers can effortlessly browse menus, place orders, and book tables directly from their devices using the app. Built with Flutter’s WebView, Mija ensures seamless integration across both web and mobile platforms, offering a smooth experience for users. The application also includes a robust CMS (Content Management System) that allows restaurant owners to manage menus, profiles, table arrangements, and reservations, as well as approve incoming orders efficiently. As a Progressive Web App (PWA), Mija enhances accessibility, enabling customers to make reservations and order food with just a few taps. The platform integrates with secure payment gateways, ensuring smooth and safe transactions. The backend is powered by Nest JS, structured as a microservice for scalability and performance. Mija provides a modern, efficient solution for dining establishments looking to digitize their operations while enhancing customer convenience.",
-    secondary_description: null, 
+    description: "Mija is a comprehensive web-based application designed to revolutionize the ordering and reservation systems for restaurants and cafes. By leveraging a user-friendly interface, customers can effortlessly browse menus, place orders, and book tables directly from their devices using the app. Built with Flutter’s WebView, Mija ensures seamless integration across both web and mobile platforms, offering a smooth experience for users. The application also includes a robust CMS (Content Management System) that allows restaurant owners to manage menus, profiles, table arrangements, and reservations, as well as approve incoming orders efficiently.",
+    secondary_description: "As a Progressive Web App (PWA), Mija enhances accessibility, enabling customers to make reservations and order food with just a few taps. The platform integrates with secure payment gateways, ensuring smooth and safe transactions. The backend is powered by Nest JS, structured as a microservice for scalability and performance. Mija provides a modern, efficient solution for dining establishments looking to digitize their operations while enhancing customer convenience.",
     key_features: [
       {
         title: "Easy Menu Browsing & Ordering",
@@ -22,17 +30,17 @@ export const data = [
         description: "Supports multiple payment gateways for secure transactions."
       }
     ],
-    benefits: [], 
-    images1:"",
-    images2:"",
-    images3:"",
+    benefits: [],
+    images1: Mija,
+    images2: "",
+    images3: "",
 
   },
   {
     id: "2",
     title: "BMS Track",
     description: "BMS Track is a comprehensive fleet management application designed to monitor and manage vehicle activities, particularly in the logistics and expedition industry. It provides real-time insights into operational performance, asset utilization, user management, and driver oversight — all in one integrated platform.",
-    secondary_description: null, 
+    secondary_description: null,
     key_features: [
       {
         title: "Vehicle Activity Monitoring",
@@ -57,9 +65,9 @@ export const data = [
       "Increases accountability with structured user and driver management.",
       "Reduces costs associated with lost time, inefficient routing, and asset mismanagement."
     ],
-  images1:"",
-    images2:"",
-    images3:"",
+    images1: Bms,
+    images2: "",
+    images3: "",
   },
   {
     id: "3",
@@ -93,11 +101,11 @@ export const data = [
       }
     ],
     benefits: [],
-   images1:"",
-    images2:"",
-    images3:"",
+    images1: Solivex,
+    images2: "",
+    images3: "",
   },
-   {
+  {
     id: "4",
     title: "Jivaloka Assets",
     description: "Jivaloka Assets is a digital system designed to help organizations manage, monitor, and optimize the use of their assets efficiently. This application provides complete visibility over the entire asset lifecycle — from planning, procurement, and registration, to maintenance and disposal.With integrated and user-friendly features, the system supports data-driven decision-making, minimizes the risk of loss or damage, and enhances operational efficiency.",
@@ -127,14 +135,88 @@ export const data = [
         title: "User Access Control",
         description: "Enhance data security with role-based access permissions."
       },
-    {
+      {
         title: "Integration",
         description: "Can connect with other systems like ERP, finance, or inventory management platforms."
       }
     ],
     benefits: [],
-    images1:"",
-    images2:"",
-    images3:"",
+    images1: Jivaloka,
+    images2: "",
+    images3: "",
   },
-]
+
+  {
+    id: "5",
+    title: "Fortune Arch website",
+    description: "Fortune Arch is a global technology company offering comprehensive solution in software development, cloud-native infrastructure, cybersecurity, artificial intelligence, and immersive technologies.",
+    secondary_description: "With a holistic approach, Fortune Arch serves various sectors, including military, telecommunications, and security, and provides technology and security consulting services to businesses and individuals.",
+    key_features: [
+      {
+        title: "Automated Asset Registration",
+        description: "Real-time tracking of assets including categories, inventory codes, locations, and condition."
+      },
+      {
+        title: "QR Code / Barcode Scanner",
+        description: "Simplifies asset identification and auditing in the field."
+      },
+      {
+        title: "Maintenance Management",
+        description: "Schedules for service, routine maintenance, and automated reminders to ensure optimal performance."
+      },
+      {
+        title: "Asset Lifecycle Tracking",
+        description: "Monitor the status of assets from acquisition to disposal."
+      },
+      {
+        title: "Reporting & Analytics",
+        description: "Financial reports, usage data, depreciation tracking, and asset history."
+      },
+      {
+        title: "User Access Control",
+        description: "Enhance data security with role-based access permissions."
+      },
+      {
+        title: "Integration",
+        description: "Can connect with other systems like ERP, finance, or inventory management platforms."
+      }
+    ],
+    benefits: [],
+    images1: fortune,
+    images2: "",
+    images3: "",
+  },
+  {
+    id: "6",
+    title: "Citrakerta Digital Twin",
+    description: "The digital twin project for Citra Kerta Residence housing developed with AutoCAD and Unreal Engine 5 aims to create a precise virtual model of an existing housing unit, replacing the need for a physical model home. This \"digital twin\" concept allows potential buyers to virtually explore the housing units, providing a more immersive and interactive experience without having to physically visit the location.",
+    secondary_description: null,
+    key_features: [
+      {
+        title: "Use of AutoCAD",
+        description: "AutoCAD is used to design architectural details and building structures with high accuracy. Each element, such as walls, windows, doors, etc., is designed in detail so that it can be translated directly into a 3D model."
+      },
+      {
+        title: "Unreal Engine 5 Integration",
+        description: "Unreal Engine 5 is used to transform AutoCAD designs into interactive 3D models that can be explored in digital form. Unreal enables the creation of realistic visuals with highly detailed lighting, textures, and shadows. This technology also makes it possible to create VR (Virtual Reality) or AR (Augmented Reality) experiences, so that potential buyers can feel like they are inside the homes they are viewing."
+      },
+      {
+        title: "Interactivity",
+        description: "This model is not just a static visual, but can also provide interaction, such as opening doors, changing wall colors, or viewing light conditions at different times (day/night)."
+      },
+      {
+        title: "Advantages",
+        description: "The digital twin can incorporate real-time data from IoT devices for dynamic updates and monitoring."
+      },
+      {
+        title: "User-friendly Interface",
+        description: "Cost and time efficiency : No need to build a sample house."
+      }
+    ],
+  benefits: [],
+  images1: citrakerta,
+  images2: "",
+  images3: "",
+  } 
+];
+
